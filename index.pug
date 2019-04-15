@@ -29,7 +29,7 @@ html
             .col-xs-12.col-md-4
                 .box.white-text
                     img(src="./videos/photo/logo.png", width="180px")
-                    h1.dancing-script.title.no-margin iRestaurante Luz
+                    h1.dancing-script.title.no-margin Restaurante Luz
                     p#is-open
                         i.glyphicon.glyphicon-time  Abierto ahora
             nav.fixed.top.right.white-text.navigation#navigation
@@ -42,9 +42,26 @@ html
                         a Contacto
                     li 
                         a Como llegar
-            .absolute.medium.black.large-paddding.bottom.white-text.full-width#description Atención cálida y preparada por chefs profesionales.
+            .absolute.black.large-paddding.bottom.white-text.full-width#description 
+                .row.middle-xs.center-xs
+                    .col-xs-7.col-sm-6.white-text.medium Atención cálida y preparada por chefs profesionales.
+                    .col-xs-5.col-sm-5.hidden
+                        .box
+                            nav.text-right.navigation
+                                ul.list-inline
+                                    li 
+                                        a(href="#") Inicio
+                                    li 
+                                        a Menú
+                                    li 
+                                        a Contacto
+                                    li 
+                                        a Como llegar
 
-
+        .full-height
+        script(src="https://code.jquery.com/jquery-3.4.0.min.js", integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=",crossorigin="anonymous")
+        script window.jQuery || document.write("<script src=\"./js/jquery.min.js\"></script>")
+        script(src="./js/main.js") 
             //- .col-xs-12.col-sm-8.col-md-6.col-lg-4
 
 

@@ -82,6 +82,9 @@ body {
 .right{
   right: 5em;
 }
+// .right-{
+//   right: 0px;
+// }
 
 .bottom{
   bottom:0px;
@@ -104,6 +107,10 @@ body {
 	display: none !important;
 } 
 
+
+.invisible{
+  visibility: hidden;
+}
 .row{
 	margin:0px;
 }
