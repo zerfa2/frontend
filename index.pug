@@ -1,0 +1,50 @@
+doctype
+html
+    head
+    link(href="https://fonts.googleapis.com/css?family=Dancing+Script",rel="stylesheet",type="text/css")
+    link(rel="stylesheet", href="css/normalize.css",type="text/css")
+    link(rel="stylesheet", href="css/bootstrap.css",type="text/css")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    meta(charset="utf-8")
+    //- link(href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css")
+    link(rel="stylesheet", href="css/flexboxgrid.min.css",type="text/css" )
+
+    link(rel="stylesheet", href="css/style.css",type="text/css" )
+    body
+        .video-container
+            //- video(autoplay="true", loop="true", width="1280", height="720")
+            video(autoplay="true", loop="true", width="1280", height="720", poster="./videos/photo/Night-BBQ.jpg")
+                //- source(src="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4",type="video/mp4")
+                //- source(src="./videos/mp4/Designer.mp4",type="video/mp4")
+                source(src="./videos/mp4/Night-BBQ.mp4",type="video/mp4")
+                source(src="./videos/ogv/Night-BBQ.ogv",type="video/ogv")
+                source(src="./videos/ogv/Night-BBQ.webm",type="video/webm")
+            //- .overlay 
+            //-     h1 Emulating background-size: cover for HTML5 video
+            //-     p Simply forcing the video to have a
+            //-     code min-width
+            //-     p Original pen with Javascript solution: 
+            //-     a(href="https://vimeo.com/channels/beeple/87099002") ver mas
+        .row.full-height.middle-xs.center-xs.relative.up
+            .col-xs-12.col-md-4
+                .box.white-text
+                    img(src="./videos/photo/logo.png", width="180px")
+                    h1.dancing-script.title.no-margin iRestaurante Luz
+                    p#is-open
+                        i.glyphicon.glyphicon-time  Abierto ahora
+            nav.fixed.top.right.white-text.navigation#navigation
+                ul.list-inline
+                    li 
+                        a(href="#") Inicio
+                    li 
+                        a Menú
+                    li 
+                        a Contacto
+                    li 
+                        a Como llegar
+            .absolute.medium.black.large-paddding.bottom.white-text.full-width#description Atención cálida y preparada por chefs profesionales.
+
+
+            //- .col-xs-12.col-sm-8.col-md-6.col-lg-4
+
+

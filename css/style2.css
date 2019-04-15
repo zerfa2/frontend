@@ -1,0 +1,24 @@
+html,body{
+	height: 100%;
+}
+h1,h2,h3,h4,h5{
+	margin: 0;
+	padding: 10px;
+}
+
+.header{
+	background: green; 
+}
+.sidebar1{
+	background: blue; 
+}
+.sidebar2{
+	background: yellow; 
+}
+
+.contenido{
+	background: #000; 
+}
+.aux{
+	background: brown; 
+}
