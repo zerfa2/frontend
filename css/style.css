@@ -24,6 +24,9 @@ html, body {
 .black {
   background-color: #000; }
 
+.white {
+  background-color: white; }
+
 .white-text {
   color: white; }
 
@@ -33,14 +36,17 @@ html, body {
 .title {
   font-size: 4em; }
 
-.fixed {
-  position: fixed; }
+.subtitle {
+  font-size: 2.1em; }
 
 .medium, .navigation li {
   font-size: 1.5em; }
 
 .large-padding {
   padding: 10px 15px; }
+
+.fixed {
+  position: fixed; }
 
 .relative {
   position: relative; }
@@ -67,7 +73,7 @@ html, body {
   width: 100%; }
 
 .hidden {
-  display: none !important; }
+  display: none; }
 
 .invisible {
   visibility: hidden; }
@@ -90,3 +96,39 @@ html, body {
     cursor: pointer; }
     .navigation li a:hover {
       text-decoration: none; }
+
+#description ul {
+  margin-bottom: 4px; }
+
+#description.absolute {
+  bottom: 0px; }
+
+#description.fixed {
+  top: 0px; }
+
+.food {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  padding: 0px;
+  overflow: hidden; }
+  .food:hover .screen {
+    top: 0%; }
+  .food .screen {
+    top: -100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    -webkit-transition: top .4s;
+    -o-transition: top .4s;
+    transition: top .4s; }
+
+#menu-title {
+  width: 300px;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
