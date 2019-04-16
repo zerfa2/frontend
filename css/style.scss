@@ -38,9 +38,38 @@ body {
   // font-family: 'Oxygen', sans-serif;
 }
 
+.card{
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  margin-bottom: 400px;
 
+}
+.container{
+  width: 80%;
+  .card{
+    margin-top: -170px;
+    padding:2em;
+  }
+}
+
+#contact{
+  margin-top: -600px;
+}
+
+input,textarea{
+  font-size: 2em;
+  padding: 0.5em;
+  border:none;
+  outline:none;
+  border-bottom: solid 2px #eee;
+  background-color:transparent;
+  width: 100%;
+}
 .black{
   background-color:#000;
+}
+
+.black-parecido{
+  background-color:#222;
 }
 
 .white{
@@ -49,6 +78,12 @@ body {
 
 .white-text{
   color:white;
+}
+.black-text{
+  color:black;
+}
+.slim{
+  font-weight: 200;
 }
 
 .dancing-script{
@@ -127,7 +162,9 @@ body {
 .no-margin{
   margin: 0px;
 }
-
+.top-space{
+  margin-top: 2em;
+}
 .navigation{
   li{
     @extend .medium;
@@ -200,6 +237,85 @@ body {
           transform: translate(-50%,-50%);
 }
 
+// slider
+#gallery{
+  // height: 100%;
+  width: 100%;
+  overflow-x:hidden; 
+  .inner{
+    white-space: nowrap;
+    position:relative;
+    left: 0%;
+    transition: left 2s;
+  }
+  .image{
+    // no pueden tener a los lados
+    // display: block;
+    display: inline-block;
+    margin-right: -4px;
+    height:100vh;
+    width: 100%;
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+  }
+}
+
+
+.path-step{
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #a2a2a2;
+  // margin-top: 3.3em;
+  margin-top: 2.8em;
+  // margin-left: 4em;
+  opacity: 0.4s;
+  &.active{
+    opacity: 1;
+    background-color:white;
+    box-shadow:0px 0px 5px rgba(250,250,250,0.8)
+  }
+}
+.font-form{
+  font-size: 0.8em;
+  background-color: transparent;
+  // color:white;
+  // background-color: blue;
+  p{
+    font-size: 1.5em;
+
+  }
+}
+.btnEnviar{
+  margin:1em;
+  background-color:#37c5ef;
+  padding:0.5em 8em;
+  margin:1em;
+  border-color:#37c5ef;
+  border-radius:10px;
+  font-size: 15px;
+}
+
+/*=============================================
+MAPAS
+=============================================*/
+
+
+#map{
+  height: 500px;
+}
+
+#location{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -50px;  
+}
+
+#menu-open{
+  display: none;
+}
+
 // .overlay {javascript:;
 //   background: rgba(0,0,0,0.5);
 //   position: absolute;
@@ -235,3 +351,72 @@ body {
 // }
 
 // code { font-family: monospace; }
+// .large-paddding{
+//   width: 100%
+
+// }
+
+/*=============================================
+BREAKPOINTS
+=============================================*/
+
+@media only screen and (max-width: 480px){
+  #menu-open{
+    display: block;
+  }
+  #responsive-nav{
+    ul{
+      position:fixed;
+      width: 100%;
+      font-size:1em;
+      top:90px;
+      background-color:#222;
+      left: 0px;
+      text-align: center;
+      margin:0px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all 0.4s;
+      &.active{
+        max-height: 80vh;
+      }
+
+      li{
+        display: block;
+        margin-top: 1em;
+        padding:10px 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px )and (max-width: 960px){
+  #menu-open{
+    display: block;
+  }
+  #responsive-nav{
+    ul{
+      position:fixed;
+      width: 100%;
+      font-size:1em;
+      top:60px;
+      background-color:#222;
+      left: 0px;
+      text-align: center;
+      margin:0px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all 0.4s;
+      &.active{
+        max-height: 80vh;
+      }
+
+      li{
+        display: block;
+        margin-top: 1em;
+        padding:10px 15px;
+      }
+    }
+  }
+
+}

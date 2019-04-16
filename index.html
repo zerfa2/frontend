@@ -5,7 +5,8 @@
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta charset="utf-8">
+  <meta data-name="image-counter" content="5">
+  <meta charset="utf-8" Content-Type="application/json">
   <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <body>
@@ -19,29 +20,29 @@
     <div class="row full-height middle-xs center-xs relative up">
       <div class="col-xs-12 col-md-4">
         <div class="box white-text"><img src="./videos/photo/logo.png" width="180px">
-          <h1 class="dancing-script title no-margin">Restaurante Luz</h1>
-          <p id="is-open"><i class="glyphicon glyphicon-time"> Abierto ahora</i></p>
+          <h1 class="dancing-script title no-margin">Restaurante Food</h1>
+          <p id="is-open"><i class="glyphicon glyphicon-time"></i><span class="text"> Abierto ahora</span></p>
         </div>
       </div>
       <nav class="fixed top right white-text navigation" id="navigation">
         <ul class="list-inline">
-          <li> <a href="#">Inicio</a></li>
-          <li> <a>Menú</a></li>
-          <li> <a>Contacto</a></li>
-          <li> <a>Como llegar</a></li>
+          <li class="list-inline-item"> <a class="menu-link" href="#">Inicio</a></li>
+          <li class="list-inline-item"> <a class="menu-link" href="#menu">Menú</a></li>
+          <li class="list-inline-item"> <a class="menu-link" href="#contact">Contacto</a></li>
+          <li class="list-inline-item"> <a class="menu-link" href="#location">Como llegar</a></li>
         </ul>
       </nav>
-      <div class="absolute black large-paddding white-text full-width" id="description"> 
+      <div class="absolute black-parecido large-paddding white-text full-width" id="description">
         <div class="row middle-xs center-xs">
-          <div class="col-xs-7 col-sm-6 white-text medium">Atención cálida y preparada por chefs profesionales.</div>
+          <div class="col-xs-7 col-sm-6 white-text medium">Preparada por chefs profesionales con una atención cálida.</div>
           <div class="col-xs-5 col-sm-5 hidden" id="sticky-navigation">
             <div class="box">
-              <nav class="text-right navigation">
+              <nav class="text-right navigation" id="responsive-nav"><i class="glyphicon white-text subtitle glyphicon-remove glyphicon-menu-hamburger" id="menu-open"></i>
                 <ul class="list-inline">
-                  <li> <a href="#">Inicio</a></li>
-                  <li> <a>Menú</a></li>
-                  <li> <a>Contacto</a></li>
-                  <li> <a>Como llegar</a></li>
+                  <li class="list-inline-item"> <a href="#">Inicio</a></li>
+                  <li class="list-inline-item"> <a>Menú</a></li>
+                  <li class="list-inline-item"> <a>Contacto</a></li>
+                  <li class="list-inline-item"> <a>Como llegar</a></li>
                 </ul>
               </nav>
             </div>
@@ -130,8 +131,61 @@
           </div>
         </div>
       </div>
+      <div id="gallery">
+        <div class="inner">
+          <div class="image" style="background-image:url(images/banner1.jpg);"></div>
+          <div class="image" style="background-image:url(images/banner2.jpg);"></div>
+          <div class="image" style="background-image:url(images/banner3.jpg);"></div>
+          <div class="image" style="background-image:url(images/banner4.jpg);"></div>
+          <div class="image" style="background-image:url(images/banner5.jpg);"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card white black-text text-center relative">
+          <h3 class="medium slim">En <strong class="dancing-script medium"> Restaurant Food</strong>
+            <p>cocinar no es una profesion, no es una tecnica, es un <strong class="dancing-script medium">arte</strong></p>
+            <p class="top-space">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+          </h3>
+        </div>
+      </div>
+      <div class="top-space black white-text full-height" id="contact">
+        <div class="row middle-xs full-height">
+          <div class="col-xs-12">
+            <div class="box">
+              <p class="text-center" style="font-size:1.4em;">Llenar el campo correspondiente y envíanos un correo.</p>
+              <form action="https://getform.io/f/1eebcd57-6e5e-4cb6-bc93-45f8e5ac1cfb" method="POST" id="contact-form">
+                <div class="row center-xs">
+                  <div class="col-xs-1 col-sm-1">
+                    <div class="box">
+                      <div class="path-step hove1 active"></div>
+                      <div class="path-step hove2"></div>
+                      <div class="path-step hove3"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-8 col-sm-5">
+                    <div class="font-form"> 
+                      <div class="box">
+                        <input type="email" name="email" placeholder="Coloca tu email" required id="form-active1">
+                        <input type="text" name="name" placeholder="Coloca tu nombre" required id="form-active2">
+                        <input type="textarea" name="body" placeholder="Escribe aqui tu mensaje" required id="form-active3">
+                        <div></div>
+                        <button class="btn btn-info btn-block btnEnviar" type="submit">Enviar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="location">
+        <div id="map"></div>
+        <div class="black large-padding white-text text-center medium" id="message"> </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYkEqgEKsFHjpTIEvLuTuwpS7C92R_GtU"></script>
+    <script src="dist/app.js"></script>
   </body>
 </html>

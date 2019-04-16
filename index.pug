@@ -4,8 +4,11 @@ html
     link(href="https://fonts.googleapis.com/css?family=Dancing+Script",rel="stylesheet",type="text/css")
     link(rel="stylesheet", href="css/normalize.css",type="text/css")
     link(rel="stylesheet", href="css/bootstrap.css",type="text/css")
+    //- link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",type="text/css")
+
     meta(name="viewport", content="width=device-width,initial-scale=1")
-    meta(charset="utf-8")
+    meta(data-name="image-counter", content="5")
+    meta(charset="utf-8", Content-Type="application/json")
     //- link(href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css")
     link(rel="stylesheet", href="css/flexboxgrid.min.css",type="text/css" )
 
@@ -29,33 +32,35 @@ html
             .col-xs-12.col-md-4
                 .box.white-text
                     img(src="./videos/photo/logo.png", width="180px")
-                    h1.dancing-script.title.no-margin Restaurante Luz
+                    h1.dancing-script.title.no-margin Restaurante Food
                     p#is-open
-                        i.glyphicon.glyphicon-time  Abierto ahora
+                        i.glyphicon.glyphicon-time
+                        span.text  Abierto ahora
             nav.fixed.top.right.white-text.navigation#navigation
                 ul.list-inline
-                    li 
-                        a(href="#") Inicio
-                    li 
-                        a Menú
-                    li 
-                        a Contacto
-                    li 
-                        a Como llegar
-            .absolute.black.large-paddding.white-text.full-width#description 
+                    li.list-inline-item 
+                        a.menu-link(href="#") Inicio
+                    li.list-inline-item 
+                        a.menu-link(href="#menu") Menú
+                    li.list-inline-item 
+                        a.menu-link(href="#contact") Contacto
+                    li.list-inline-item 
+                        a.menu-link(href="#location") Como llegar
+            .absolute.black-parecido.large-paddding.white-text.full-width#description
                 .row.middle-xs.center-xs
-                    .col-xs-7.col-sm-6.white-text.medium Atención cálida y preparada por chefs profesionales.
+                    .col-xs-7.col-sm-6.white-text.medium Preparada por chefs profesionales con una atención cálida.
                     .col-xs-5.col-sm-5.hidden#sticky-navigation
                         .box
-                            nav.text-right.navigation
+                            nav.text-right.navigation#responsive-nav
+                                i.glyphicon.white-text.subtitle.glyphicon-remove.glyphicon-menu-hamburger#menu-open
                                 ul.list-inline
-                                    li 
+                                    li.list-inline-item  
                                         a(href="#") Inicio
-                                    li 
+                                    li.list-inline-item  
                                         a Menú
-                                    li 
+                                    li.list-inline-item  
                                         a Contacto
-                                    li 
+                                    li.list-inline-item  
                                         a Como llegar
 
         .full-height
@@ -113,10 +118,61 @@ html
                             .row.center-xs.middle-xs.full-height
                                 .col-xs-12
                                     h2.dancing-script.white-text.no-margin.subtitle Visual 8
-                    //- img(src="images/b8.jpg")
+                 
+            #gallery
+                .inner
+                    .image(style="background-image:url(images/banner1.jpg);")
+                    .image(style="background-image:url(images/banner2.jpg);")
+                    .image(style="background-image:url(images/banner3.jpg);")
+                    .image(style="background-image:url(images/banner4.jpg);")
+                    .image(style="background-image:url(images/banner5.jpg);")
+            //- div(style="width:80%")
+            .container
+                .card.white.black-text.text-center.relative
+                    h3.medium.slim En 
+                        strong.dancing-script.medium  Restaurant Food
+                        p cocinar no es una profesion, no es una tecnica, es un 
+                            strong.dancing-script.medium arte
+                        p.top-space Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                       
+
+            .top-space.black.white-text.full-height#contact
+                .row.middle-xs.full-height
+                    .col-xs-12
+                        .box
+                            p.text-center(style="font-size:1.4em;") Llenar el campo correspondiente y envíanos un correo.
+                            //- form(action="https://formspree.io/deybiscalderonpascual@gmail.com",method="POST",id="contact-form")
+                            form(action="https://getform.io/f/1eebcd57-6e5e-4cb6-bc93-45f8e5ac1cfb",method="POST",id="contact-form")
+                                .row.center-xs
+                                    .col-xs-1.col-sm-1
+                                        .box
+                                            .path-step.hove1.active
+                                            .path-step.hove2
+                                            .path-step.hove3
+                                    .col-xs-8.col-sm-5
+                                        div.font-form 
+                                            //- p Llenar el campo correspondiente y envíanos un correo.
+                                            .box
+                                                //- label NOmbre
+                                                input(type="email",name="email",placeholder="Coloca tu email",required,id="form-active1")
+                                                input(type="text",name="name",placeholder="Coloca tu nombre",required,id="form-active2")
+                                                input(type="textarea",name="body",placeholder="Escribe aqui tu mensaje",required,id="form-active3")
+                                                div
+                                                button(type="submit",class="btn btn-info btn-block btnEnviar") Enviar
+
+            #location
+                #map
+                #message.black.large-padding.white-text.text-center.medium 
+
         script(src="https://code.jquery.com/jquery-3.4.0.min.js", integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=",crossorigin="anonymous")
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYkEqgEKsFHjpTIEvLuTuwpS7C92R_GtU")
+        //- script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+
+
         //- script window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>');
-        script(src="js/main.js")
+        //- script(src="dist/main.js")
+        //- script(src="dist/maps.js")
+        script(src="dist/app.js")
         
 
 
